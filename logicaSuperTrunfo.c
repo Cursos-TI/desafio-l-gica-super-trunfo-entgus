@@ -12,7 +12,8 @@ int main() {
  int pib; 
  int pontoturistico;  
  int escolha;
- 
+ int resultado1 = 0;
+int resultado2 = 0;
  
 printf("cidade: \n", nome);
 scanf(" %s", &nome);
@@ -93,9 +94,9 @@ printf("5.densidade populacional\n");
 printf("6.pib per capita\n");
 printf("7.geral\n");
 
-printf("digite o numero:\n");
+printf("digite o numero\n");
 
-scanf ("%d", &escolha);
+scanf("%d", &escolha);
 
 switch (escolha){
 case 1:
@@ -154,10 +155,10 @@ case 6: if( pibpercapita > pibpercapita2){
 }  else{
     printf("empate");
 } 
+
 break; 
 case 7:
-int resultado1 = 0;
-int resultado2 = 0;
+
 
 if( populacao > populacao2){
     resultado1 += 1; 
@@ -217,10 +218,11 @@ printf("GANHADOR: %s +%d\n %s +%d\n", nome, resultado1, nome2, resultado2);
 } if (resultado1 == resultado2){
     printf(" EMPATE\n %s +%d\n %s +%d \n", nome, resultado1, nome2, resultado2);
 } 
-break;
 
+break;
 default:
 printf("invalido\n");
     break;
 }
+return 0;
 }
